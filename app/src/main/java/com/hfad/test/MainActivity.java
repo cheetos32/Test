@@ -27,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
         this.krepost = (Spinner) findViewById(R.id.spinner3);
     }
     public void onClick(View view) {
+        String p1 = cvetPiva.getSelectedItem().toString();
+        String p2 = strana.getSelectedItem().toString();
+        String p3 = krepost.getSelectedItem().toString();
         List<Beer> beer = new ArrayList<>();
         StringBuilder mass = new StringBuilder();
-        //StringBuilder checkList = new StringBuilder();
-        //StringBuilder vibranniyFilter = new StringBuilder();
         beer.add(new Beer("Светлое","Россия","Среднее","Жигулёвское"));
         beer.add(new Beer("Светлое","Россия","Среднее","Донская пена"));
         beer.add(new Beer("Светлое","Россия","Крепкое","Балтика 9"));
@@ -40,19 +41,13 @@ public class MainActivity extends AppCompatActivity {
         beer.add(new Beer("Светлое","Россия","Безалкогольное","Балтика 0"));
         beer.add(new Beer("Светлое","Россия","Лёгкое","Русское лёгкое пиво"));
         beer.add(new Beer("Светлое","Россия","Лёгкое","Классное лёгкое пиво"));
+        beer.add(new Beer("Тёмное","Россия","Лёгкое","Тёмное лёгкое пиво"));
 
         for (Beer s: beer) {
-            //String s2 = checkList.append(s).toString();
-            String p1 = cvetPiva.getSelectedItem().toString();
-            String p2 = strana.getSelectedItem().toString();
-            String p3 = krepost.getSelectedItem().toString();
-            //vibranniyFilter.append(cvetPiva.getSelectedItem()).append(strana.getSelectedItem()).append(krepost.getSelectedItem());
-            if (s.cvet.equals(p1)&s.strana.equals(p2)&s.krepost.equals(p3)){
-            //if (s2.startsWith(vibranniyFilter.toString())) {
+
+            if ((s.cvet.equals(p1)|p1.equals("Цвет пива"))&(s.strana.equals(p2)|p2.equals("Страна"))&(s.krepost.equals(p3)|p3.equals("Крепость"))){
                 mass.append(s.name).append('\n');
             }
-            //checkList = new StringBuilder();
-            //vibranniyFilter = new StringBuilder();
         }
         rezultat.setText(mass);
     }

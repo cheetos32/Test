@@ -8,11 +8,13 @@
         <item>Янтарное</item>
     </string-array>
     <string-array name="strana">
+        <item>Страна</item>
         <item>Россия</item>
         <item>Германия </item>
         <item>Швеция</item>
     </string-array>
     <string-array name="krepost">
+        <item>Крепость</item>
         <item>Лёгкое</item>
         <item>Среднее</item>
         <item>Крепкое</item>
