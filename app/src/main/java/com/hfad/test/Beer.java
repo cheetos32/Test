@@ -1,33 +1,18 @@
 package com.hfad.test;
 import java.util.ArrayList;
 import java.util.List;
-
-
 public class Beer {
-
-
-
-
-    public String name;
-    public String cvet;
-    public int num;
-    public Beer (String name, String cvet, int num) {
+    public String name,cvet,strana,krepost;
+        public Beer (String cvet,String strana,String krepost,String name) {
         this.cvet = cvet;
+        this.strana = strana;
         this.name = name;
-        this.num = num;
-    }
-
-    public Beer (String cvet) {
-        this.cvet = cvet;
-    }
-
+        this.krepost = krepost;
+            }
     @Override
     public String toString () {
-        return name +" "+cvet;
+        return cvet+strana+krepost+name;
     }
-
-
-
     }
 
 

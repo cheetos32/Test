@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">Test</string>
     <string name="Button">Вывод</string>
-    <string-array name="CvetPiva">
+    <string-array name="cvetPiva">
         <item>Цвет пива</item>
         <item>Светлое</item>
+        <item>Тёмное</item>
+        <item>Янтарное</item>
     </string-array>
-
-
+    <string-array name="strana">
+        <item>Россия</item>
+        <item>Германия </item>
+        <item>Швеция</item>
+    </string-array>
+    <string-array name="krepost">
+        <item>Лёгкое</item>
+        <item>Среднее</item>
+        <item>Крепкое</item>
+        <item>Безалкогольное</item>
+    </string-array>
 </resources>
