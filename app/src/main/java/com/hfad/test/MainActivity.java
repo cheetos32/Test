@@ -1,5 +1,6 @@
 package com.hfad.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public Button vivodButton;
+    public Button buttonTest;
     public TextView rezultat;
     public Spinner cvetPiva;
     public Spinner strana;
@@ -21,11 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.vivodButton = (Button) findViewById(R.id.button);
+        this.buttonTest = (Button) findViewById(R.id.button2);
         this.rezultat = (TextView) findViewById(R.id.textView);
         this.cvetPiva = (Spinner) findViewById(R.id.spinner);
         this.strana = (Spinner) findViewById(R.id.spinner2);
         this.krepost = (Spinner) findViewById(R.id.spinner3);
     }
+    public void onClick2 (View view) {
+        Intent intent = new Intent(this, ActivityList.class);
+        startActivity (intent);
+
+
+    }
+
+
+
     public void onClick(View view) {
         String p1 = cvetPiva.getSelectedItem().toString();
         String p2 = strana.getSelectedItem().toString();

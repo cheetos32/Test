@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Test</string>
     <string name="Button">Вывод</string>
+    <string name="Button_test">Переход</string>
     <string-array name="cvetPiva">
         <item>Цвет пива</item>
         <item>Светлое</item>
@@ -20,4 +21,8 @@
         <item>Крепкое</item>
         <item>Безалкогольное</item>
     </string-array>
+    <string name="title_activity_list">ActivityList</string>
+    <string name="title_home">Фильтр</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
