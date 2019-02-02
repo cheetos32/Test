@@ -21,8 +21,11 @@
         <item>Крепкое</item>
         <item>Безалкогольное</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_add">AddActivity</string>
     <string name="title_activity_list">ActivityList</string>
     <string name="title_home">Фильтр</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">Каталог</string>
+    <string name="title_notifications">Добавить</string>
+
 </resources>

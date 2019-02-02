@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -16,19 +17,28 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     public Button vivodButton;
     public Button buttonTest;
+    public Button test;
     public TextView rezultat;
     private TextView mTextMessage;
     public Spinner cvetPiva;
     public Spinner strana;
     public Spinner krepost;
+    public MenuItem catalog;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        this.vivodButton = (Button) findViewById(R.id.button);
+        this.rezultat = (TextView) findViewById(R.id.textView);
+        this.cvetPiva = (Spinner) findViewById(R.id.spinner);
+        this.strana = (Spinner) findViewById(R.id.spinner2);
+        this.krepost = (Spinner) findViewById(R.id.spinner3);
 
-
-
-
-
-
-
+        mTextMessage = (TextView) findViewById(R.id.message);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -36,68 +46,26 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.filter:
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity (intent);
                     mTextMessage.setText(R.string.title_home);
+
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.catalog:
+                    Intent intent1 = new Intent(MainActivity.this, ActivityList.class);
+                    startActivity (intent1);
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.add:
+                    Intent intent2 = new Intent(MainActivity.this, AddActivity.class);
+                    startActivity (intent2);
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;
         }
     };
-
-
-
-
-
-
-
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        this.vivodButton = (Button) findViewById(R.id.button);
-        this.buttonTest = (Button) findViewById(R.id.button2);
-        this.rezultat = (TextView) findViewById(R.id.textView);
-        this.cvetPiva = (Spinner) findViewById(R.id.spinner);
-        this.strana = (Spinner) findViewById(R.id.spinner2);
-        this.krepost = (Spinner) findViewById(R.id.spinner3);
-
-
-
-
-
-
-
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-
-
-
-
-
-
-
-
-    }
-    public void onClick2 (View view) {
-        Intent intent = new Intent(this, ActivityList.class);
-        startActivity (intent);
-
-
-    }
-
-
 
     public void onClick(View view) {
         String p1 = cvetPiva.getSelectedItem().toString();
@@ -122,10 +90,9 @@ public class MainActivity extends AppCompatActivity {
                 mass.append(s.name).append('\n');
             }
         }
+        Intent intent = new Intent(this, ActivityList.class);
+        startActivity (intent);
+
         rezultat.setText(mass);
     }
 }
-
-
-
-
