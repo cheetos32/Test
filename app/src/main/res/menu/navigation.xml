@@ -4,18 +4,18 @@
     <item
         android:id="@+id/filter"
         android:icon="@drawable/ic_filter"
-        android:title="@string/title_home" />
+        android:title="@string/flter" />
 
     <item
         android:id="@+id/catalog"
         android:icon="@drawable/ic_catalog"
-        android:title="@string/title_dashboard"
+        android:title="@string/catalog"
         />
 
     <item
         android:id="@+id/add"
         android:icon="@drawable/ic_add"
-        android:title="@string/title_notifications"
+        android:title="@string/add"
         />
 
 </menu>

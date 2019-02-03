@@ -16,14 +16,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public Button vivodButton;
-    public Button buttonTest;
-    public Button test;
     public TextView rezultat;
-    private TextView mTextMessage;
     public Spinner cvetPiva;
     public Spinner strana;
     public Spinner krepost;
-    public MenuItem catalog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         this.strana = (Spinner) findViewById(R.id.spinner2);
         this.krepost = (Spinner) findViewById(R.id.spinner3);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -49,18 +44,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.filter:
                     Intent intent = new Intent(MainActivity.this, MainActivity.class);
                     startActivity (intent);
-                    mTextMessage.setText(R.string.title_home);
-
                     return true;
                 case R.id.catalog:
                     Intent intent1 = new Intent(MainActivity.this, ActivityList.class);
                     startActivity (intent1);
-                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
                 case R.id.add:
                     Intent intent2 = new Intent(MainActivity.this, AddActivity.class);
                     startActivity (intent2);
-                    mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;

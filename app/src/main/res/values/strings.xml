@@ -24,8 +24,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="title_activity_list">ActivityList</string>
-    <string name="title_home">Фильтр</string>
-    <string name="title_dashboard">Каталог</string>
-    <string name="title_notifications">Добавить</string>
+    <string name="flter">Фильтр</string>
+    <string name="catalog">Каталог</string>
+    <string name="add">Добавить</string>
 
 </resources>
