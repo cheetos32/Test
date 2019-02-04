@@ -81,9 +81,12 @@ public class MainActivity extends AppCompatActivity {
                 mass.append(s.name).append('\n');
             }
         }
+
         Intent intent = new Intent(this, ActivityList.class);
+        intent.putExtra(ActivityList.LIST, mass.toString());
+
         startActivity (intent);
 
-        rezultat.setText(mass);
+        
     }
 }
