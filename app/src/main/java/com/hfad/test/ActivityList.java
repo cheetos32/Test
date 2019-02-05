@@ -22,10 +22,15 @@ public class ActivityList extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.filter:
+                    Intent intent = new Intent(ActivityList.this, MainActivity.class);
+                    startActivity (intent);
                     return true;
                 case R.id.catalog:
+
                     return true;
                 case R.id.add:
+                    Intent intent2 = new Intent(ActivityList.this, AddActivity.class);
+                    startActivity (intent2);
                     return true;
             }
             return false;

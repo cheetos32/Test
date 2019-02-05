@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.filter:
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                    startActivity (intent);
+
                     return true;
                 case R.id.catalog:
                     Intent intent1 = new Intent(MainActivity.this, ActivityList.class);
@@ -87,6 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity (intent);
 
-        
+
     }
 }
