@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Пиво</string>
-    <string name="Button">Вывод</string>
-    <string name="Button_test">Переход</string>
+    <string name="Button">Показать</string>
+    <string name="Button_clear">Очистить</string>
+
     <string-array name="cvetPiva">
         <item>Цвет пива</item>
         <item>Светлое</item>

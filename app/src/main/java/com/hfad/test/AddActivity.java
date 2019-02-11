@@ -1,18 +1,21 @@
 package com.hfad.test;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class AddActivity extends AppCompatActivity {
+public class AddActivity extends Activity {
     private EditText mark;
     private Spinner cvet;
     private Spinner strana;
@@ -51,15 +54,33 @@ public class AddActivity extends AppCompatActivity {
         this.krepost = (Spinner) findViewById(R.id.spinner6);
         this.add = (Button) findViewById(R.id.button2);
         this.vivod = (TextView) findViewById(R.id.textView3);
+        mark.setText("");
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        Menu menu = navigation.getMenu();
+        MenuItem menuItem = menu.getItem(2);
+        menuItem.setChecked(true);
     }
 
     public void onClick (View view) {
-        StringBuilder list = new StringBuilder();
-        list.append(mark.getText()).append('\n').append(cvet.getSelectedItem()).append('\n').append(strana.getSelectedItem()).append('\n').append(krepost.getSelectedItem());
-        vivod.setText(list);
+        if (mark.getText().toString().isEmpty()) {
+            CharSequence mistake = "Введите название марки пива";
+            int duration = Toast.LENGTH_LONG;
+            Toast toast = Toast.makeText(this,mistake,duration);
+            toast.show();
+        } else {
+            mark.getText();
+            StringBuilder list = new StringBuilder();
+            list.append(mark.getText()).append('\n').append(cvet.getSelectedItem()).append('\n').append(strana.getSelectedItem()).append('\n').append(krepost.getSelectedItem());
+            vivod.setText(list);
+
+            CharSequence text = "Спасибо, пиво будет добавлено";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(this,text,duration);
+            toast.show();
+            mark.setText("");
+        }
 
     }
 

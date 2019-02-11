@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/filter"
         android:icon="@drawable/ic_filter"
         android:title="@string/flter" />
-
     <item
-        android:id="@+id/catalog"
-        android:icon="@drawable/ic_catalog"
-        android:title="@string/catalog"
-        />
-
-    <item
-        android:id="@+id/add"
-        android:icon="@drawable/ic_add"
-        android:title="@string/add" />
-
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title=""
+        app:actionViewClass="android.widget.SearchView" />
 </menu>
