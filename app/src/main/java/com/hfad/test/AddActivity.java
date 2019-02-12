@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,7 +29,7 @@ public class AddActivity extends Activity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.filter:
-                    Intent intent1 = new Intent(AddActivity.this, MainActivity.class);
+                    Intent intent1 = new Intent(AddActivity.this, FilterActivity.class);
                     startActivity (intent1);
                     return true;
                 case R.id.catalog:
