@@ -33,7 +33,7 @@ public class AddActivity extends Activity {
                     startActivity (intent1);
                     return true;
                 case R.id.catalog:
-                    Intent intent2 = new Intent(AddActivity.this, ActivityList.class);
+                    Intent intent2 = new Intent(AddActivity.this, CatalogActivity.class);
                     startActivity (intent2);
                     return true;
                 case R.id.add:
