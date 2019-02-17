@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,12 +15,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AddActivity extends Activity {
+public class AddActivity extends AppCompatActivity {
     private EditText mark;
     private Spinner cvet;
     private Spinner strana;
     private Spinner krepost;
-    private Button add;
     private TextView vivod;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -51,7 +51,6 @@ public class AddActivity extends Activity {
         this.cvet = (Spinner) findViewById(R.id.spinner4);
         this.strana = (Spinner) findViewById(R.id.spinner5);
         this.krepost = (Spinner) findViewById(R.id.spinner6);
-        this.add = (Button) findViewById(R.id.button2);
         this.vivod = (TextView) findViewById(R.id.textView3);
         mark.setText("");
 
