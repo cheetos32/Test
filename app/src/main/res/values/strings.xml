@@ -24,6 +24,7 @@
     <string name="title_activity_main">Фильтр</string>
     <string name="title_activity_add">Добавить пивко</string>
     <string name="title_activity_list">Каталог</string>
+    <string name="title_activity_beer_item">Подробно</string>
     <string name="flter">Фильтр</string>
     <string name="catalog">Каталог</string>
     <string name="add">Добавить</string>

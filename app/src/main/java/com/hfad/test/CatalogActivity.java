@@ -23,6 +23,24 @@ public class CatalogActivity extends FilterActivity {
     public ArrayAdapter <String> allBeersAdapter, receivedfilterBeerListAdapter;
     public ArrayList<String> receivedfilterBeerList;
     public ArrayList<String> allBeers;
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+public boolean onOptionsItemSelected (@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case (R.id.addMenuItem):
+                Intent intent = new Intent(this,AddActivity.class);
+                startActivity(intent);
+                return true;
+            case (R.id.filterMenuItem):
+                Intent intent1 = new Intent(this,FilterActivity.class);
+                startActivity(intent1);
+                return true;
+        }
+return super.onOptionsItemSelected(item);
+    }
+
 
 
 

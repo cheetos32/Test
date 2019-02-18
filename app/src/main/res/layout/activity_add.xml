@@ -6,6 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddActivity">
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -34,15 +37,16 @@
         android:id="@+id/editText4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:autofillHints="@string/markaPiva"
         android:ems="9"
         android:hint="@string/markaPiva"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Spinner
         android:id="@+id/spinner4"

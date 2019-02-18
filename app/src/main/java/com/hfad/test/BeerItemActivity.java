@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import static com.hfad.test.Beer.beers;
@@ -15,6 +16,8 @@ public class BeerItemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beer_item);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         this.name = (TextView) findViewById(R.id.nameTextView);
         this.strana = (TextView)findViewById(R.id.stranaTextView);
         this.krepost = (TextView) findViewById(R.id.krepostTextView);
